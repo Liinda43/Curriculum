@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Rosada</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  body {
+    background-color: #f4f0ed;
+    font-family: Arial, sans-serif;
+  }
+  .calculator {
+    width: 300px;
+    margin: 100px auto;
+    background-color: #fce8e6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  .calculator h2 {
+    text-align: center;
+    color: #e6499f;
+  }
+  .calculator input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  .calculator .button-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+  }
+  .calculator button {
+    padding: 10px;
+    background-color: #e6499f;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+  }
+  .calculator button:hover {
+    background-color: #ff6b6b;
+  }
+</style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Calculadora</h2>
+    <input type="text" id="display" disabled>
+    <div class="button-row">
+    
+      <button class="btn btn-primary" onclick="appendToDisplay('7')">7</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('8')">8</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('9')">9</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('/')">/</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('4')">4</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('5')">5</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('6')">6</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('*')">*</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('1')">1</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('2')">2</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('3')">3</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('-')">-</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('0')">0</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('.')">.</button>
+      <button class="btn btn-primary" onclick="appendToDisplay('+')">+</button>
+      <button class="btn btn-primary" onclick="calculateResult()">=</button>
+      <button class="btn btn-danger" onclick="clearDisplay()">C</button>
+      <button class="btn btn-danger" onclick="resetDisplay()">AC</button>
+
+    </div>
+  </div>
+  
+  <script>
+    function appendToDisplay(value) {
+      document.getElementById('display').value += value;
+    }
+    
+    function calculateResult() {
+      const displayValue = document.getElementById('display').value;
+      try {
+        const result = eval(displayValue);
+        document.getElementById('display').value = result;
+      } catch (error) {
+        document.getElementById('display').value = 'Error';
+      }
+    }
+    
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+    
+    function resetDisplay() {
+      document.getElementById('display').value = '';
+    }
+  </script>
+    <a href="./index.html">da clic para volver a inicio</a>
+</body>
+</html>
