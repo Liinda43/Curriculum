@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoopinShoop - Ofertas y Descuentos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #70656d00; /* Color de fondo gris claro */
+    }
+    .navbar {
+      background-color: #de19d4; /* Color de fondo rosa claro */
+    }
+    .carousel-item img {
+      max-height: 400px; /* Altura máxima de las imágenes del carrusel */
+      object-fit: cover;
+    }
+    .carousel-caption {
+      background-color: rgba(240, 224, 226, 0.8); /* Fondo rosa claro semi-transparente para los títulos */
+    }
+    .carousel-caption h2 {
+      font-size: 2rem;
+      color: #FFF; /* Color de fuente blanco */
+    }
+    .discount {
+      background-color: #f0c5cc; /* Color de fondo rosa más oscuro */
+      color: #FFF;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"><strong>ShoopinShoop</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+
+       <a href="./index.html">inicio</a>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Productos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Ofertas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img3.jpg" class="d-block w-100" alt="Imagen 1">
+        <div class="carousel-caption">
+          <h2>¡Nuevas Llegadas!</h2>
+          <p>Descubre nuestras últimas adiciones a la colección.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="imag4.jpg" class="d-block w-100" alt="Imagen 2">
+        <div class="carousel-caption">
+          <h2>Oferta Especial</h2>
+          <p>50% de descuento en una selección de productos.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="imag5.jpg" class="d-block w-100" alt="Imagen 3">
+        <div class="carousel-caption">
+          <h2>Envío Gratis</h2>
+          <p>Realiza una compra y obtén envío gratuito.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <img src="img6.jpg" class="card-img-top" alt="Producto 1">
+        <div class="card-body">
+          <h5 class="card-title">Vestido Floral</h5>
+          <p class="card-text">Elegante vestido floral para ocasiones especiales.</p>
+          <div class="discount">30% de Descuento</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <img src="img7.jpg" class="card-img-top" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Pantalon Cargo</h5>
+          <p class="card-text">Un basico en tu closet.</p>
+          <div class="discount">20% de Descuento</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <img src="123.jpg" class="card-img-top" alt="Producto 3">
+        <div class="card-body">
+          <h5 class="card-title">Calculadora</h5>
+          <p class="card-text">Facil de usar..</p>  <a href="calculadora.html">da clic</a>
+          <div class="discount">"Calcula tu total"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-light text-center py-3 mt-5">
+  <p>&copy; 2023 ShoopinShoop - Todos los derechos reservados.</p>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
